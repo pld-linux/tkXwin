@@ -1,0 +1,19 @@
+diff -durN tkXwin-1.0.orig/Makefile.am tkXwin-1.0/Makefile.am
+--- tkXwin-1.0.orig/Makefile.am	Sun Aug 25 00:57:10 2002
++++ tkXwin-1.0/Makefile.am	Sat Jan 11 19:26:05 2003
+@@ -22,11 +22,11 @@
+ libtkXwin_la_LIBADD = $(LIB_TCL)
+ 
+ install-exec-hook:
+-	$(mkinstalldirs) @PKG_TCL@
++	$(mkinstalldirs) $(DESTDIR)@PKG_TCL@
+ 	echo	"package ifneeded tkXwin"				   \
+ 		`echo $(VERSION) | awk -F. '{ printf "%s.%s", $$1, $$2 }'` \
+-		"[list load $(DESTDIR)$(libdir)/libtkXwin.so]"	   \
+-	    > @PKG_TCL@/pkgIndex.tcl
++		"[list load $(libdir)/libtkXwin.so]"	   \
++	    > $(DESTDIR)@PKG_TCL@/pkgIndex.tcl
+ 	sed -e 's%load .libs/libtkXwin.so%package require tkXwin%' \
+ 	    < test.tcl      					   \
+-	    > @PKG_TCL@/test.tcl
++	    > $(DESTDIR)@PKG_TCL@/test.tcl
