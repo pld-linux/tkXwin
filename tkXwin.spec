@@ -2,7 +2,7 @@ Summary:	Some X11 extensions for Tk
 Summary(pl):	Ró¿ne rozszerzenia X11 do Tk
 Name:		tkXwin
 Version:	1.0
-Release:	2
+Release:	3
 License:	distributable
 Group:		Development/Languages/Tcl
 Source0:	http://beepcore-tcl.sourceforge.net/%{name}-%{version}.tgz
