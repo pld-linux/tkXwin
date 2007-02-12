@@ -1,5 +1,5 @@
 Summary:	Some X11 extensions for Tk
-Summary(pl):	R�ne rozszerzenia X11 do Tk
+Summary(pl.UTF-8):   Różne rozszerzenia X11 do Tk
 Name:		tkXwin
 Version:	1.0
 Release:	3
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Some X11 extensions for Tk.
 
-%description -l pl
-R�ne rozszerzenia X11 do Tk.
+%description -l pl.UTF-8
+Różne rozszerzenia X11 do Tk.
 
 %prep
 %setup -q
